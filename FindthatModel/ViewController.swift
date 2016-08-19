@@ -9,17 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var deviceLabel: UILabel!
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        deviceLabel.text = DeviceModel.sharedInstance.deviceDictionary().object(forKey:systemInfo().deviceType()) as? String
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

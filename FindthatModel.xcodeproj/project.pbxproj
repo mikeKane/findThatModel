@@ -12,6 +12,8 @@
 		A58D42E51D675DC5002338BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58D42E31D675DC5002338BA /* Main.storyboard */; };
 		A58D42E71D675DC5002338BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58D42E61D675DC5002338BA /* Assets.xcassets */; };
 		A58D42EA1D675DC5002338BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58D42E81D675DC5002338BA /* LaunchScreen.storyboard */; };
+		A58D42F21D677176002338BA /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D42F11D677176002338BA /* DeviceModel.swift */; };
+		A58D42F61D6771FA002338BA /* systemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A58D42F51D6771FA002338BA /* systemInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		A58D42E61D675DC5002338BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A58D42E91D675DC5002338BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A58D42EB1D675DC5002338BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A58D42F11D677176002338BA /* DeviceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
+		A58D42F31D6771F9002338BA /* FindthatModel-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FindthatModel-Bridging-Header.h"; sourceTree = "<group>"; };
+		A58D42F41D6771FA002338BA /* systemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = systemInfo.h; sourceTree = "<group>"; };
+		A58D42F51D6771FA002338BA /* systemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = systemInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +61,15 @@
 			isa = PBXGroup;
 			children = (
 				A58D42DF1D675DC5002338BA /* AppDelegate.swift */,
+				A58D42F11D677176002338BA /* DeviceModel.swift */,
+				A58D42F41D6771FA002338BA /* systemInfo.h */,
+				A58D42F51D6771FA002338BA /* systemInfo.m */,
 				A58D42E11D675DC5002338BA /* ViewController.swift */,
 				A58D42E31D675DC5002338BA /* Main.storyboard */,
 				A58D42E61D675DC5002338BA /* Assets.xcassets */,
 				A58D42E81D675DC5002338BA /* LaunchScreen.storyboard */,
 				A58D42EB1D675DC5002338BA /* Info.plist */,
+				A58D42F31D6771F9002338BA /* FindthatModel-Bridging-Header.h */,
 			);
 			path = FindthatModel;
 			sourceTree = "<group>";
@@ -97,6 +107,7 @@
 					A58D42DB1D675DC5002338BA = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = YNEH3B8QJ7;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,8 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A58D42F61D6771FA002338BA /* systemInfo.m in Sources */,
 				A58D42E21D675DC5002338BA /* ViewController.swift in Sources */,
 				A58D42E01D675DC5002338BA /* AppDelegate.swift in Sources */,
+				A58D42F21D677176002338BA /* DeviceModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,11 +274,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = YNEH3B8QJ7;
 				INFOPLIST_FILE = FindthatModel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MikeKane.FindthatModel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FindthatModel/FindthatModel-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -274,11 +290,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = YNEH3B8QJ7;
 				INFOPLIST_FILE = FindthatModel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MikeKane.FindthatModel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FindthatModel/FindthatModel-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
